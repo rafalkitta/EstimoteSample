@@ -12,6 +12,4 @@
 
 @property (strong, nonatomic) UIColor *color;
 
-- (id)initWithColor:(UIColor *)color;
-
 @end
