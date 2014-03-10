@@ -29,24 +29,28 @@
                                            green:229.f/255.f
                                             blue:255.f/255.f
                                            alpha:1.f];
+        [_bigCircle setNeedsDisplay];
         [self addSubview:_bigCircle];
         _largeCircle = [[CircleView alloc] init];
         _largeCircle.color = [UIColor colorWithRed:153.f/255.f
                                              green:204.f/255.f
                                               blue:255.f/255.f
                                              alpha:1.f];
+        [_largeCircle setNeedsDisplay];
         [self addSubview:_largeCircle];
         _mediumCircle = [[CircleView alloc] init];
         _mediumCircle.color = [UIColor colorWithRed:102.f/255.f
                                               green:178.f/255.f
                                                blue:255.f/255.f
                                               alpha:1.f];
+        [_mediumCircle setNeedsDisplay];
         [self addSubview:_mediumCircle];
         _smallCircle = [[CircleView alloc] init];
         _smallCircle.color = [UIColor colorWithRed:51.f/255.f
                                              green:153.f/255.f
                                               blue:255.f/255.f
                                              alpha:1.f];
+        [_smallCircle setNeedsDisplay];
         [self addSubview:_smallCircle];
         
 //_____________________________________
@@ -112,6 +116,7 @@
     
     CGRect bigCircleRect = CGRectInset(largeCircleRect, -120.f, -120.f);
     _bigCircle.frame = bigCircleRect;
+    
 //_____________________________________
     
 //    CGRect iPhoneRect

@@ -20,6 +20,16 @@
     return self;
 }
 
+- (id)initWithColor:(UIColor *)color{
+    self = [super init];
+    if (self) {
+        // Initialization code
+        self.backgroundColor = [UIColor clearColor];
+        _color = color;
+    }
+    return self;
+}
+
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
@@ -31,7 +41,6 @@
                                    _color.CGColor);
     CGContextFillEllipseInRect(context, rect);
     CGContextStrokePath(context);
-    
     
 }
 

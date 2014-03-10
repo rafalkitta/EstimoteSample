@@ -10,6 +10,8 @@
 
 @interface CircleView : UIView
 
-@property (weak, nonatomic) UIColor *color;
+@property (strong, nonatomic) UIColor *color;
+
+- (id)initWithColor:(UIColor *)color;
 
 @end

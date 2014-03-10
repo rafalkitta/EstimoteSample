@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5B400F91-8063-4474-864D-6EBAD7EE94C5</string>
+	<key>IDESourceControlProjectName</key>
+	<string>EstimoteSample</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>4C783C77-9D52-4B61-9AEF-EDBAFEEEBB80</key>
+		<string>https://github.com/rafalkitta/EstimoteSample.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>EstimoteSample/EstimoteSample.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>4C783C77-9D52-4B61-9AEF-EDBAFEEEBB80</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/rafalkitta/EstimoteSample.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>4C783C77-9D52-4B61-9AEF-EDBAFEEEBB80</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4C783C77-9D52-4B61-9AEF-EDBAFEEEBB80</string>
+			<key>IDESourceControlWCCName</key>
+			<string>EstimoteSample</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -31,6 +31,8 @@
     
     // save weak referance
     _mainView = view;
+    
+    [self setupManager];
 }
 
 - (void)viewDidLoad
@@ -38,7 +40,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     _mainView.label.text = @"Nie znaleziono...";
-//    [_mainView.beaconImageView changeYCoordinate:[NSNumber numberWithInt:-90]];
+    [_mainView.beaconImageView changeYCoordinate:[NSNumber numberWithInt:-90]];
 
 }
 
@@ -74,7 +76,7 @@
     if([beacons count] > 0)
     {
         
-        if(!_selectedBeacon)
+        /*if(!_selectedBeacon)
         {
             // initialy pick closest beacon
             _selectedBeacon = [beacons objectAtIndex:0];
@@ -90,7 +92,8 @@
                     _selectedBeacon = cBeacon;
                 }
             }
-        }
+        }*/
+        _selectedBeacon = [beacons objectAtIndex:0];
         
         NSNumber *num = [[NSNumber alloc] initWithInt:_selectedBeacon.rssi];
         [_mainView.beaconImageView changeYCoordinate:num];
@@ -99,6 +102,8 @@
                                @"Major: %i, Minor: %i\nRegion: ",
                                [_selectedBeacon.major unsignedShortValue],
                                [_selectedBeacon.minor unsignedShortValue]];
+        
+//        NSLog(@"%@",_selectedBeacon.proximityUUID);
         
         switch (_selectedBeacon.proximity)
         {
