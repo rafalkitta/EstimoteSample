@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "MainView.h"
+#import "ListOfBeaconsViewController.h"
 
 @interface MainViewController ()
 
@@ -18,6 +19,7 @@
     
     ESTBeaconManager *_beaconManager;
     ESTBeacon *_selectedBeacon;
+    NSMutableArray *_allBeacons;
 }
 
 - (void)loadView{
@@ -39,9 +41,14 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"All"
+                                                                              style:UIBarButtonItemStylePlain
+                                                                             target:self
+                                                                             action:@selector(showListOfAllBeacons)];
+
     _mainView.label.text = @"Nie znaleziono...";
     [_mainView.beaconImageView changeYCoordinate:[NSNumber numberWithInt:-90]];
-
+    _allBeacons = [NSMutableArray alloc];
 }
 
 - (void)didReceiveMemoryWarning
@@ -69,9 +76,9 @@
 
 #pragma mark - ESTBeaconManagerDelegate Implementation
 
--(void)beaconManager:(ESTBeaconManager *)manager
-     didRangeBeacons:(NSArray *)beacons
-            inRegion:(ESTBeaconRegion *)region
+- (void)beaconManager:(ESTBeaconManager *)manager
+      didRangeBeacons:(NSArray *)beacons
+             inRegion:(ESTBeaconRegion *)region
 {
     if([beacons count] > 0)
     {
@@ -93,6 +100,7 @@
                 }
             }
         }*/
+        _allBeacons = [NSMutableArray arrayWithArray:beacons];
         _selectedBeacon = [beacons objectAtIndex:0];
         
         NSNumber *num = [[NSNumber alloc] initWithInt:_selectedBeacon.rssi];
@@ -126,6 +134,14 @@
         
         _mainView.label.text = labelText;
     }
+}
+
+- (void)showListOfAllBeacons{
+    
+    ListOfBeaconsViewController *listViewController = [[ListOfBeaconsViewController alloc] init];
+    listViewController.listOfBeacons = _allBeacons;
+    [self.navigationController pushViewController:listViewController
+                                         animated:YES];
 }
 
 @end

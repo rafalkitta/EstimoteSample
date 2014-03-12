@@ -24,7 +24,7 @@
 
 - (void)changeYCoordinate:(NSNumber *)newY{
     _posMin = 150.f;
-    _posRange = [UIScreen mainScreen].bounds.size.height - 220.f; //jak zrobić z tego stałą?
+    _posRange = [UIScreen mainScreen].bounds.size.height - 180.f; //jak zrobić z tego stałą?
 
     float distFactor = ([newY floatValue] + 30) / -70;
     

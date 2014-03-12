@@ -90,12 +90,12 @@
     [super layoutSubviews];
     
     CGRect rect = self.bounds;
-    CGRect rectInset = CGRectInset(rect, 20.f, 20.f);
+    CGRect rectInset = CGRectInset(rect, 20.f, 50.f);
 //_____________________________________
     
     CGSize labelSize = CGSizeMake(CGRectGetWidth(rectInset), 100.f);
     CGRect labelRect = CGRectMake(CGRectGetMinX(rectInset),
-                                  CGRectGetMaxY(rectInset) - labelSize.height,
+                                  CGRectGetMaxY(rect) - labelSize.height,
                                   labelSize.width,
                                   labelSize.height);
     _label.frame = labelRect;
@@ -111,15 +111,14 @@
     CGRect mediumCircleRect = CGRectInset(smallCircleRect, -80.f, -80.f);
     _mediumCircle.frame = mediumCircleRect;
     
-    CGRect largeCircleRect = CGRectInset(mediumCircleRect, -100.f, -100.f);
+    CGRect largeCircleRect = CGRectInset(mediumCircleRect, -90.f, -90.f);
     _largeCircle.frame = largeCircleRect;
     
-    CGRect bigCircleRect = CGRectInset(largeCircleRect, -120.f, -120.f);
+    CGRect bigCircleRect = CGRectInset(largeCircleRect, -100.f, -100.f);
     _bigCircle.frame = bigCircleRect;
     
 //_____________________________________
     
-//    CGRect iPhoneRect
     _iPhoneImageView.center = CGPointMake(CGRectGetMidX(smallCircleRect),
                                           CGRectGetMidY(smallCircleRect));
 }

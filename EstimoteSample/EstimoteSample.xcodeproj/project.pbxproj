@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		286C42F718D0AAE300CC1363 /* ListOfBeaconsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 286C42F618D0AAE300CC1363 /* ListOfBeaconsCell.m */; };
+		286C42FA18D0AAF900CC1363 /* ListOfBeaconsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 286C42F918D0AAF900CC1363 /* ListOfBeaconsViewController.m */; };
+		286C42FD18D0C19700CC1363 /* ListOfBeaconsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 286C42FC18D0C19700CC1363 /* ListOfBeaconsView.m */; };
 		28E216D918CA1AF400F049C6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E216D818CA1AF400F049C6 /* Foundation.framework */; };
 		28E216DB18CA1AF400F049C6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E216DA18CA1AF400F049C6 /* CoreGraphics.framework */; };
 		28E216DD18CA1AF400F049C6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E216DC18CA1AF400F049C6 /* UIKit.framework */; };
@@ -43,6 +46,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		286C42F518D0AAE300CC1363 /* ListOfBeaconsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListOfBeaconsCell.h; path = ../Source/EstimoteSample/Cells/ListOfBeaconsCell.h; sourceTree = "<group>"; };
+		286C42F618D0AAE300CC1363 /* ListOfBeaconsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListOfBeaconsCell.m; path = ../Source/EstimoteSample/Cells/ListOfBeaconsCell.m; sourceTree = "<group>"; };
+		286C42F818D0AAF900CC1363 /* ListOfBeaconsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListOfBeaconsViewController.h; path = ../Source/EstimoteSample/ViewControllers/ListOfBeaconsViewController.h; sourceTree = "<group>"; };
+		286C42F918D0AAF900CC1363 /* ListOfBeaconsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListOfBeaconsViewController.m; path = ../Source/EstimoteSample/ViewControllers/ListOfBeaconsViewController.m; sourceTree = "<group>"; };
+		286C42FB18D0C19700CC1363 /* ListOfBeaconsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListOfBeaconsView.h; path = ../Source/EstimoteSample/Views/ListOfBeaconsView.h; sourceTree = "<group>"; };
+		286C42FC18D0C19700CC1363 /* ListOfBeaconsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListOfBeaconsView.m; path = ../Source/EstimoteSample/Views/ListOfBeaconsView.m; sourceTree = "<group>"; };
 		28E216D518CA1AF400F049C6 /* EstimoteSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EstimoteSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28E216D818CA1AF400F049C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		28E216DA18CA1AF400F049C6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -104,6 +113,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		286C42EF18D0A39500CC1363 /* ListOfBeaconsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				286C42F818D0AAF900CC1363 /* ListOfBeaconsViewController.h */,
+				286C42F918D0AAF900CC1363 /* ListOfBeaconsViewController.m */,
+				286C42F418D0AA3800CC1363 /* Cell */,
+				286C42F318D0A55700CC1363 /* Views */,
+			);
+			name = ListOfBeaconsViewController;
+			sourceTree = "<group>";
+		};
+		286C42F318D0A55700CC1363 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				286C42FB18D0C19700CC1363 /* ListOfBeaconsView.h */,
+				286C42FC18D0C19700CC1363 /* ListOfBeaconsView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		286C42F418D0AA3800CC1363 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				286C42F518D0AAE300CC1363 /* ListOfBeaconsCell.h */,
+				286C42F618D0AAE300CC1363 /* ListOfBeaconsCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		28E216CC18CA1AF400F049C6 = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +262,7 @@
 		28FD332118CA1F1A005DA8D7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				286C42EF18D0A39500CC1363 /* ListOfBeaconsViewController */,
 				28FD332718CA236C005DA8D7 /* MainViewController */,
 			);
 			name = Controllers;
@@ -393,8 +432,11 @@
 			files = (
 				28E216E918CA1AF400F049C6 /* AppDelegate.m in Sources */,
 				28FD333718CD1510005DA8D7 /* CircleView.m in Sources */,
+				286C42F718D0AAE300CC1363 /* ListOfBeaconsCell.m in Sources */,
+				286C42FA18D0AAF900CC1363 /* ListOfBeaconsViewController.m in Sources */,
 				28FD333C18CD3061005DA8D7 /* BeaconImageView.m in Sources */,
 				28FD332B18CA23E6005DA8D7 /* MainView.m in Sources */,
+				286C42FD18D0C19700CC1363 /* ListOfBeaconsView.m in Sources */,
 				28FD332518CA1F9E005DA8D7 /* MainViewController.m in Sources */,
 				28E216E518CA1AF400F049C6 /* main.m in Sources */,
 			);
