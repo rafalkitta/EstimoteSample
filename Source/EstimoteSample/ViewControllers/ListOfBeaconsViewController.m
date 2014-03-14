@@ -10,6 +10,7 @@
 #import "ListOfBeaconsCell.h"
 #import "ListOfBeaconsView.h"
 #import <ESTBeacon.h>
+#import "ConnectedViewController.h"
 
 @interface ListOfBeaconsViewController ()
 
@@ -110,7 +111,14 @@
 #pragma mark - UITableView Delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    [tableView deselectRowAtIndexPath:indexPath
+                             animated:YES];
+    
+    ConnectedViewController *connectVC = [[ConnectedViewController alloc] initWithBeacon:[_listOfBeacons objectAtIndex:indexPath.row]];
+    [self.navigationController pushViewController:connectVC
+                                         animated:YES];
+    
 }
 
 /*

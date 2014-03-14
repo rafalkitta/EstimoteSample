@@ -34,7 +34,6 @@
     // save weak referance
     _mainView = view;
     
-    [self setupManager];
 }
 
 - (void)viewDidLoad
@@ -48,7 +47,9 @@
 
     _mainView.label.text = @"Nie znaleziono...";
     [_mainView.beaconImageView changeYCoordinate:[NSNumber numberWithInt:-90]];
-    _allBeacons = [NSMutableArray alloc];
+    _allBeacons = [[NSMutableArray alloc] init];
+    
+    [self setupManager];
 }
 
 - (void)didReceiveMemoryWarning
@@ -103,7 +104,7 @@
         _allBeacons = [NSMutableArray arrayWithArray:beacons];
         _selectedBeacon = [beacons objectAtIndex:0];
         
-        NSNumber *num = [[NSNumber alloc] initWithInt:_selectedBeacon.rssi];
+        NSNumber *num = [[NSNumber alloc] initWithInt:(int)_selectedBeacon.rssi];
         [_mainView.beaconImageView changeYCoordinate:num];
         
         NSString* labelText = [NSString stringWithFormat:
@@ -137,11 +138,20 @@
 }
 
 - (void)showListOfAllBeacons{
-    
-    ListOfBeaconsViewController *listViewController = [[ListOfBeaconsViewController alloc] init];
-    listViewController.listOfBeacons = _allBeacons;
-    [self.navigationController pushViewController:listViewController
-                                         animated:YES];
+    if(_allBeacons.count == 0){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
+                                                        message:@"Brak urządzeń w zasięgu."
+                                                       delegate:self
+                                              cancelButtonTitle:@"Ok"
+                                              otherButtonTitles:nil, nil];
+        [alert show];
+    }else
+    {
+        ListOfBeaconsViewController *listViewController = [[ListOfBeaconsViewController alloc] init];
+        listViewController.listOfBeacons = _allBeacons;
+        [self.navigationController pushViewController:listViewController
+                                             animated:YES];
+    }
 }
 
 @end
