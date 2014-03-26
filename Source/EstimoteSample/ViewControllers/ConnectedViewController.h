@@ -11,6 +11,14 @@
 
 @interface ConnectedViewController : UIViewController <ESTBeaconDelegate>
 
+/**
+ *  Initializes @c ConnectedViewController with beacon object.
+ *
+ *  @param beacon 
+ *  ESTBeacon object.
+ *
+ *  @return An initialized ConnectedViewController.
+ */
 - (id)initWithBeacon:(ESTBeacon *)beacon;
 
 @end

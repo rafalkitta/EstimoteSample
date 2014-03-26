@@ -123,19 +123,10 @@
                                           CGRectGetMidY(smallCircleRect));
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
+#pragma mark - BeaconImageViewDelegate
 
 -(void)changePosition:(NSNumber *)newY{
-    _beaconImageView.center = CGPointMake(self.bounds.size.width / 2, [newY floatValue]);
+    _beaconImageView.center = CGPointMake(self.bounds.size.width / 2, [newY doubleValue]);
 }
-
-
 
 @end

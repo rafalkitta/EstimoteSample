@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		28249BCC18D33CAE00677C73 /* ConnectedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28249BCB18D33CAE00677C73 /* ConnectedView.m */; };
 		28249BCF18D33CD900677C73 /* ConnectedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28249BCE18D33CD900677C73 /* ConnectedViewController.m */; };
+		282D7A5B18E30CE500DC54ED /* MyBeaconManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 282D7A5A18E30CE500DC54ED /* MyBeaconManager.m */; };
 		286C42F718D0AAE300CC1363 /* ListOfBeaconsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 286C42F618D0AAE300CC1363 /* ListOfBeaconsCell.m */; };
 		286C42FA18D0AAF900CC1363 /* ListOfBeaconsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 286C42F918D0AAF900CC1363 /* ListOfBeaconsViewController.m */; };
 		286C42FD18D0C19700CC1363 /* ListOfBeaconsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 286C42FC18D0C19700CC1363 /* ListOfBeaconsView.m */; };
@@ -52,6 +53,8 @@
 		28249BCB18D33CAE00677C73 /* ConnectedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConnectedView.m; path = ../Source/EstimoteSample/Views/ConnectedView.m; sourceTree = "<group>"; };
 		28249BCD18D33CD900677C73 /* ConnectedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConnectedViewController.h; path = ../Source/EstimoteSample/ViewControllers/ConnectedViewController.h; sourceTree = "<group>"; };
 		28249BCE18D33CD900677C73 /* ConnectedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConnectedViewController.m; path = ../Source/EstimoteSample/ViewControllers/ConnectedViewController.m; sourceTree = "<group>"; };
+		282D7A5918E30CE500DC54ED /* MyBeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyBeaconManager.h; path = ../Source/EstimoteSample/Other/MyBeaconManager.h; sourceTree = "<group>"; };
+		282D7A5A18E30CE500DC54ED /* MyBeaconManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyBeaconManager.m; path = ../Source/EstimoteSample/Other/MyBeaconManager.m; sourceTree = "<group>"; };
 		286C42F518D0AAE300CC1363 /* ListOfBeaconsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListOfBeaconsCell.h; path = ../Source/EstimoteSample/Cells/ListOfBeaconsCell.h; sourceTree = "<group>"; };
 		286C42F618D0AAE300CC1363 /* ListOfBeaconsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListOfBeaconsCell.m; path = ../Source/EstimoteSample/Cells/ListOfBeaconsCell.m; sourceTree = "<group>"; };
 		286C42F818D0AAF900CC1363 /* ListOfBeaconsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListOfBeaconsViewController.h; path = ../Source/EstimoteSample/ViewControllers/ListOfBeaconsViewController.h; sourceTree = "<group>"; };
@@ -136,6 +139,15 @@
 				28249BCB18D33CAE00677C73 /* ConnectedView.m */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		282D7A5818E30C8200DC54ED /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				282D7A5918E30CE500DC54ED /* MyBeaconManager.h */,
+				282D7A5A18E30CE500DC54ED /* MyBeaconManager.m */,
+			);
+			name = Other;
 			sourceTree = "<group>";
 		};
 		286C42EF18D0A39500CC1363 /* ListOfBeaconsViewController */ = {
@@ -307,6 +319,7 @@
 				28FD332318CA1F9E005DA8D7 /* MainViewController.h */,
 				28FD332418CA1F9E005DA8D7 /* MainViewController.m */,
 				28FD332818CA2387005DA8D7 /* Views */,
+				282D7A5818E30C8200DC54ED /* Other */,
 			);
 			name = MainViewController;
 			sourceTree = "<group>";
@@ -371,6 +384,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Rafał Kitta";
 				TargetAttributes = {
+					28E216D418CA1AF400F049C6 = {
+						DevelopmentTeam = E6WRHQXQE9;
+					};
 					28E216EF18CA1AF400F049C6 = {
 						TestTargetID = 28E216D418CA1AF400F049C6;
 					};
@@ -457,6 +473,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28249BCF18D33CD900677C73 /* ConnectedViewController.m in Sources */,
+				282D7A5B18E30CE500DC54ED /* MyBeaconManager.m in Sources */,
 				28E216E918CA1AF400F049C6 /* AppDelegate.m in Sources */,
 				28FD333718CD1510005DA8D7 /* CircleView.m in Sources */,
 				286C42F718D0AAE300CC1363 /* ListOfBeaconsCell.m in Sources */,
@@ -584,6 +601,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -593,6 +612,7 @@
 				INFOPLIST_FILE = "EstimoteSample/EstimoteSample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6656B208-8D22-4AC8-A3C7-44F92EABDC86";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -603,6 +623,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -612,6 +634,7 @@
 				INFOPLIST_FILE = "EstimoteSample/EstimoteSample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6656B208-8D22-4AC8-A3C7-44F92EABDC86";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

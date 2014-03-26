@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <ESTBeaconManager.h>
 
-@interface MainViewController : UIViewController <ESTBeaconManagerDelegate>
+@interface MainViewController : UIViewController
 
 @end

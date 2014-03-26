@@ -12,6 +12,10 @@
 @interface MainView : UIView <BeaconImageViewDelegate>
 
 @property (nonatomic) UILabel *label;
+
+/**
+ *  BeaconImageView to represent image with beacon. It receives a changes in Y coordinate via @c BeaconImageViewDelegate. 
+ */
 @property (nonatomic, strong) BeaconImageView *beaconImageView;
 
 

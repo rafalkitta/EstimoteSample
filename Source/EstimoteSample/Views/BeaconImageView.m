@@ -24,25 +24,16 @@
 
 - (void)changeYCoordinate:(NSNumber *)newY{
     _posMin = 150.f;
-    _posRange = [UIScreen mainScreen].bounds.size.height - 180.f; //jak zrobić z tego stałą?
+    _posRange = [UIScreen mainScreen].bounds.size.height - 180.f;
 
-    float distFactor = ([newY floatValue] + 30) / -70;
+    double distFactor = ([newY floatValue] + 30) / -70;
     
     // calculate and set new y position
-    float newYPos = _posMin + distFactor * _posRange;
+    double newYPos = _posMin + distFactor * _posRange;
     NSNumber *floatObj = [NSNumber numberWithFloat:newYPos];
     
     [_delegate performSelector:@selector(changePosition:)
                     withObject:floatObj];
 }
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
 
 @end
